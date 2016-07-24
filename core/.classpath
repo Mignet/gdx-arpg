@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/快盘/libgdx-1.2.0/gdx.jar" sourcepath="D:/快盘/libgdx-1.2.0/sources/gdx-sources.jar">
+		<attributes>
+			<attribute name="source_encoding" value="UTF-8"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/快盘/libgdx-1.2.0/extensions/gdx-freetype/gdx-freetype.jar"/>
+	<classpathentry kind="lib" path="D:/快盘/libgdx-1.2.0/gdx-backend-lwjgl.jar"/>
+	<classpathentry kind="lib" path="D:/快盘/libgdx-1.2.0/extensions/gdx-tools/gdx-tools.jar" sourcepath="D:/快盘/libgdx-1.2.0/extensions/gdx-tools/sources/gdx-tools-sources.jar">
+		<attributes>
+			<attribute name="source_encoding" value="UTF-8"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
