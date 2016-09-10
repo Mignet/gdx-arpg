@@ -5,7 +5,7 @@ import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
 import com.v5ent.game.ArpgGame;
 import com.v5ent.game.util.Constants;
 
-public class DesktopLauncher {
+public class ArpgLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
 		

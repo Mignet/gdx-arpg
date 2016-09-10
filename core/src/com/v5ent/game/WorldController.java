@@ -18,11 +18,11 @@ import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.math.Vector2;
-import com.v5ent.game.domain.Cursor;
-import com.v5ent.game.domain.Player;
-import com.v5ent.game.domain.Player.Direction;
-import com.v5ent.game.domain.Player.Status;
 import com.v5ent.game.map.Map;
+import com.v5ent.game.model.Cursor;
+import com.v5ent.game.model.Player;
+import com.v5ent.game.model.Player.Direction;
+import com.v5ent.game.model.Player.Status;
 import com.v5ent.game.skill.Skill;
 import com.v5ent.game.tools.CameraHelper;
 import com.v5ent.game.util.Constants;
@@ -56,7 +56,6 @@ public class WorldController extends InputAdapter{
     public Skill skill;
     public Cursor cursor;
     public Map map;
-//    public Sprite bg,bg_;
 
     private void initAllObjects() {
     	cameraHelper = new CameraHelper();
@@ -202,6 +201,8 @@ public class WorldController extends InputAdapter{
         if (keycode == Keys.R) {
             init();
             Gdx.app.debug(TAG, "Game world resetted");
+        }else if(keycode == Keys.Q){
+        	Gdx.app.exit();
         }
         if (keycode == Keys.ALT_RIGHT) {
         	alt = false;

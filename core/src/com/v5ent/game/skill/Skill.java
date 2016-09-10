@@ -11,7 +11,7 @@ package com.v5ent.game.skill;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.v5ent.game.domain.BaseEntity;
+import com.v5ent.game.model.BaseEntity;
 
 /**
  * 技能基类 <br/>

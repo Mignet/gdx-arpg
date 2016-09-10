@@ -19,7 +19,7 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.v5ent.game.Assets;
-import com.v5ent.game.domain.Player;
+import com.v5ent.game.model.Player;
 import com.v5ent.game.tools.CameraHelper;
 import com.v5ent.game.util.Constants;
 

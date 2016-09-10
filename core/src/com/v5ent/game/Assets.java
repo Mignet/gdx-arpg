@@ -19,9 +19,10 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
-import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
+//import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.Disposable;
+import com.v5ent.game.util.CharConstants;
 import com.v5ent.game.util.Constants;
 
 /**
@@ -85,10 +86,11 @@ public class Assets implements Disposable, AssetErrorListener {
 		thunder = loads("skill/奔雷/benlei (",").png",35, 450, 450);
 		cursor = splitU("windowsets/cur_move_strip11.png", 30, 30);
 		
-	/*	FreeTypeFontGenerator generator = 
-				new FreeTypeFontGenerator( Gdx.files.internal( "fonts/Inconsolata.otf" ) );
+		/*FreeTypeFontGenerator generator = 
+				new FreeTypeFontGenerator( Gdx.files.internal( "fonts/STLITI.TTF" ) );
         FreeTypeFontGenerator.FreeTypeFontParameter fontParameter = 
                 new FreeTypeFontGenerator.FreeTypeFontParameter();
+        fontParameter.characters = CharConstants.CHINESE;
         //根据参数设置生成的字体数据
         FreeTypeFontGenerator.FreeTypeBitmapFontData fontData =
         		generator.generateData(fontParameter);
