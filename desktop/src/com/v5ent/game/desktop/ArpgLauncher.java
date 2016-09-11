@@ -1,5 +1,7 @@
 package com.v5ent.game.desktop;
 
+import com.badlogic.gdx.Application;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
 import com.v5ent.game.ArpgGame;
@@ -25,5 +27,7 @@ public class ArpgLauncher {
 		config.fullscreen = false;
 		config.vSyncEnabled = true;
 		new LwjglApplication(new ArpgGame(), config);
+		 // Set Libgdx log level to DEBUG
+        Gdx.app.setLogLevel(Application.LOG_DEBUG);
 	}
 }
