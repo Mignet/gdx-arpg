@@ -1,4 +1,4 @@
-package com.v5ent.game.desktop;
+package com.v5ent.game.tools;
 
 import com.badlogic.gdx.tools.hiero.Hiero;
 

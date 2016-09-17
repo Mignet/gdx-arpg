@@ -1,4 +1,4 @@
-package com.v5ent.game.desktop;
+package com.v5ent.game.tools;
 
 import java.io.File;
 import java.io.FileReader;
