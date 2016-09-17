@@ -64,7 +64,11 @@ public class DebugMarker {
         debugRenderer.end();
         Gdx.gl.glLineWidth(1);
     }
-    
+    /**
+     * 绘制地图网格
+     * @param m
+     * @param projectionMatrix
+     */
     public static void drawMapGrid(Map m,Matrix4 projectionMatrix)
     {
     	float offsetX = m.getX();
@@ -89,6 +93,12 @@ public class DebugMarker {
     	}
     	debugRenderer.end();
     }
+    /**
+     * 根据某点绘制单元
+     * @param m
+     * @param p
+     * @param projectionMatrix
+     */
     public static void drawCell(Map m,Vector2 p,Matrix4 projectionMatrix)
     {
     	Gdx.gl.glLineWidth(2);

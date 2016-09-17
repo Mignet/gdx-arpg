@@ -85,13 +85,16 @@ public class WorldRenderer implements Disposable {
     public void render() {
     	worldController.cameraHelper.applyTo(camera);
     	renderAllObjects(batch);
-    	renderMapConlision(batch);
-    	DebugMarker.drawMapGrid(worldController.map,camera.combined);
+//    	renderMapConlision(batch);
+//    	DebugMarker.drawMapGrid(worldController.map,camera.combined);
     	Vector2 p = worldController.map.getMapCellPostion(worldController.player.getPosition());
-    	DebugMarker.drawCell(worldController.map, p, camera.combined);
+//    	DebugMarker.drawCell(worldController.map, p, camera.combined);
     	renderGui(batch);
     }
-    
+    /**
+     * 测试，绘制碰撞矩形
+     * @param batch
+     */
     private void renderMapConlision(SpriteBatch batch) {
     	ShapeRenderer rend = DebugMarker.getDebugRenderer();
     	rend.setProjectionMatrix(camera.combined);
