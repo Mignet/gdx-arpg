@@ -85,10 +85,12 @@ public class WorldRenderer implements Disposable {
     public void render() {
     	worldController.cameraHelper.applyTo(camera);
     	renderAllObjects(batch);
-//    	renderMapConlision(batch);
-//    	DebugMarker.drawMapGrid(worldController.map,camera.combined);
-    	Vector2 p = worldController.map.getMapCellPostion(worldController.player.getPosition());
-//    	DebugMarker.drawCell(worldController.map, p, camera.combined);
+    	if(Gdx.app.getPreferences("config.ini").getBoolean("EditMode", false)){
+	    	renderMapConlision(batch);
+	    	DebugMarker.drawMapGrid(worldController.map,camera.combined);
+	    	Vector2 p = worldController.map.getMapCellPostion(worldController.player.getPosition());
+	    	DebugMarker.drawCell(worldController.map, p, camera.combined);
+    	}
     	renderGui(batch);
     }
     /**

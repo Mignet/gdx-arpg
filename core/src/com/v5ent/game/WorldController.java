@@ -14,6 +14,7 @@ import java.util.List;
 
 import com.badlogic.gdx.Application.ApplicationType;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Preferences;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.files.FileHandle;
@@ -194,6 +195,7 @@ public class WorldController extends InputAdapter{
         y += cameraHelper.getPosition().y;
         cameraHelper.setPosition(x, y);
     }
+    //记录ALT是否按住
     boolean alt = false;
 	@Override
 	public boolean keyUp(int keycode) {
@@ -203,6 +205,10 @@ public class WorldController extends InputAdapter{
             Gdx.app.debug(TAG, "Game world resetted");
         }else if(keycode == Keys.Q){
         	Gdx.app.exit();
+        }else if(keycode == Keys.E){
+        	Preferences prefs = Gdx.app.getPreferences("config.ini");
+        	prefs.putBoolean("EditMode", !prefs.getBoolean("EditMode"));
+        	prefs.flush();
         }
         if (keycode == Keys.ALT_RIGHT) {
         	alt = false;
@@ -268,9 +274,14 @@ public class WorldController extends InputAdapter{
 		//屏幕点击的坐标系是左上角
 		Gdx.app.debug(TAG, "pointer END:"+pointer+"=>("+x+","+y+")=>Cursor:("+cursor.getX()+","+cursor.getY()+")");
 		endPoint.set(x,y);
+		//如果起点和终点一样，我们认为是点击
 		if(startPoint.equals(endPoint)){
 			//地图编辑
-			map.markBlock(new Vector2(x-Constants.SCREEN_WIDTH/2-cursor.getWidth()/2,cursor.getHeight()/2+-y+Constants.SCREEN_HEIGHT/2),cameraHelper.getPosition());
+			if(Gdx.app.getPreferences("config.ini").getBoolean("EditMode", false)){
+				map.markBlock(new Vector2(x-Constants.SCREEN_WIDTH/2-cursor.getWidth()/2,cursor.getHeight()/2+-y+Constants.SCREEN_HEIGHT/2),cameraHelper.getPosition());
+			}else{
+				//移动到该位置
+			}
 		}
 		//判断是否施法成功
 		Trace.symbol(this,points,player);
